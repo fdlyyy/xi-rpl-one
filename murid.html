@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XI RPL 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="rpl.png">
+    <style>
+
+        h1 {
+            color: #ffffff;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #search {
+            padding: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        li, ul {
+            padding: 5px;
+            text-align: justify;
+            text-decoration: none;
+            margin: 5px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body bgcolor="#3299a8" background="">
+    <table  height="80" width="100%">
+        <!-- Navigasi -->
+        <tr bgcolor="#3164b5">
+            <td class="header" colspan="4" width="10" height="50" align="left">
+            <a class="ig" href="http://instagram.com/otherside.rpl1"> <img src="rpl.png" width="50" height="" align="center"> XI RPL 1  </a>
+            <a class="tombol" href="home.html">Home</a> 
+            <a class="tombol" href="about.html">About</a> 
+            <a class="tombol" href="organigram.html">Organigram</a> 
+            <a class="tombol" href="gallery.html">Gallery</a> 
+            <a class="tombol" href="murid.html">Murid</a>
+            </td>
+        </tr>
+            <!-- Content -->
+        <tr>
+            <td>
+                <div class="murid">
+                <div class="search-list">    
+                <h1> Murid XI RPL 1</h1>
+                <h1> Daftar Nama Absen </h1>
+                <label for="search">Cari Nama:</label>
+                <input type="text" id="search" onkeyup="searchName()">
+                </div>
+                <ul id="nameList">
+                    <ul id="nameList" >
+                        <li type="1"><a href="/data siswa/ade.html">Ade Muharam Mulyana</a></li>
+                        <li type="1"><a href="/data siswa/alya.html">Alya Nursabilah</a></li>
+                        <li type="1"><a href="/data siswa/arief.html">Arief Mulyawan</a></li>
+                        <li type="1"><a href="/data siswa/arya.html">Arya Zulfi Fairuz</a></li>
+                        <li type="1"><a href="/data siswa/daffa.html">Daffa Agustine Sulaiman</a></li>
+                        <li type="1"><a href="/data siswa/fitri.html">Fitri Andini</a></li>
+                        <li type="1"><a href="/data siswa/hendri.html">Hendri Angga Saputra</a></li>
+                        <li type="1"><a href="/data siswa/ilham.html">Ilham Hamdani</a></li>
+                        <li type="1"><a href="/data siswa/iqbal.html">Iqbal Ma'said</a></li>
+                        <li type="1"><a href="/data siswa/irly.html">Irly Julianti</a></li>
+                        <li type="1"><a href="/data siswa/rafli.html">Muhammad Rafli Syam</a></li>
+                        <li type="1"><a href="/data siswa/andifa.html">Muhammad Andifa Agung Fajar</a></li>
+                        <li type="1"><a href="data siswa/fadly.html">Muhammad Fadly Sayogi</a></li>
+                        <li type="1"><a href="data siswa/rizqi.html">Muhammad Rizqi Putra</a></li>
+                        <li type="1"><a href="data siswa/nia.html">Nia Aprilina</a></li>
+                        <li type="1"><a href="data siswa/nur.html">Nur Hasanah Fauziah</a></li>
+                        <li type="1"><a href="data siswa/raden.html">Raden Adi Lampar</a></li>
+                        <li type="1"><a href="data siswa/rahmat.html">Rahmat Fauzi</a></li>
+                        <li type="1"><a href="data siswa/regi.html">Regi Fauzi</a></li>
+                        <li type="1"><a href="data siswa/revan.html">Revan Herdiansyah</a></li>
+                        <li type="1"><a href="data siswa/reza.html">Reza Baihaqqi</a></li>
+                        <li type="1"><a href="data siswa/rizki.html">Rizki Mulana</a></li>
+                        <li type="1"><a href="data siswa/sari.html">Sari Rahayu </a></li>
+                        <li type="1"><a href="data siswa/seni.html">Seni Nurohiman</a></li>
+                        <li type="1"><a href="data siswa/siti.html">Siti Nursabila</a></li>
+                        <li type="1"><a href="data siswa/yogi.html">Yogi Saputra</a></li>
+                        <li type="1"><a href="data siswa/yusuf.html">Yusuf Maulana</a></li>
+                        <li type="1"><a href="data siswa/galih.html">Galih Arfiansyah</a></li>
+
+
+                    </ul>
+                </ul>
+            </div>
+            </td>
+            </tr>
+        <tr>
+            <td colspan="3" align="center"><footer> &copy; 2023 Fadlyy</footer></td>
+        </tr>
+    </table>
+    <script>
+        function searchName() {
+            var input = document.getElementById('search').value.toLowerCase();
+            var names = document.getElementById('nameList').getElementsByTagName('li');
+        
+            for (var i = 0; i < names.length; i++) {
+                var name = names[i].textContent.toLowerCase();
+        
+            
+                switch (true) {
+                    case name.includes(input):
+                        names[i].style.display = 'block';
+                        break;
+                    default:
+                        names[i].style.display = 'none';
+                }
+            }
+        }
+        </script>
+        
+</body>
+</html>
